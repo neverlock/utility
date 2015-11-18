@@ -15,7 +15,7 @@ func SelfUpdate(version string, url string, appName string) error {
 		CmdName:        appName, // app name
 	}
 	if updater != nil {
-		fmt.Printf("[%s]:[%s] Checking for new versions...", appName, version)
+		fmt.Printf("[%s]:[%s] Checking for new versions...\n", appName, version)
 		err := updater.BackgroundRun()
 		if err != nil {
 			return err
