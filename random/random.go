@@ -20,9 +20,9 @@ func Int(min int, max int) int {
 	return min + rand.Intn(max-min)
 }
 
-func Fint(max uint64) int {
+func Fint(min int, max uint64) int {
 	seed := uint64(time.Now().Nanosecond())
 	xor128p := xorshift.NewXorShift128Plus(seed)
 	random := xor128p.Next()
-	return int(random % max)
+	return min + int(random%(max-min))
 }
