@@ -2,7 +2,7 @@ package random
 
 import (
 	"github.com/lazybeaver/xorshift"
-	"math/rand"
+	//"math/rand"
 	"time"
 )
 
@@ -11,18 +11,18 @@ func Str(l int) string {
 	buf := make([]byte, l)
 	char = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 	for i := 0; i < l; i++ {
-		buf[i] = char[rand.Intn(len(char)-1)]
+		buf[i] = char[Fint(uint64(len(char)-1))]
 	}
 	return string(buf)
 }
 
 func Int(min int, max int) int {
-	return min + rand.Intn(max-min)
+	return min + Fint(uint64(max-min))
 }
 
-func Fint(min int, max uint64) int {
+func Fint(max uint64) int {
 	seed := uint64(time.Now().Nanosecond())
 	xor128p := xorshift.NewXorShift128Plus(seed)
 	random := xor128p.Next()
-	return min + int(random%(max-min))
+	return int(random % max)
 }
