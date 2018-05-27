@@ -1,5 +1,7 @@
 *** Example
 
+inspire from https://stackoverflow.com/questions/17156371/how-to-get-json-response-in-golang
+
 ```golang
 package main
 import (
