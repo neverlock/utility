@@ -1,6 +1,6 @@
 *** Example
 
-```
+```golang
 package main
 import (
 	"github.com/neverlock/utility/httpjs"
