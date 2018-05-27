@@ -27,7 +27,7 @@ func main(){
 	foo1 := new(Foo) // or &Foo{}  
 	err := httpjs.GetJS("http://httpbin.org/get", foo1)
 	if err != nil {
-		fmt.Printljn(err)
+		fmt.Println(err)
 	}
 	fmt.Printf("%v\n", foo1.Headers)
 	fmt.Println(foo1.Headers.ACCEPT) 
