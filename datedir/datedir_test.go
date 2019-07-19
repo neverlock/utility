@@ -14,9 +14,11 @@ func Test_getDay(t *testing.T) {
 
 func Test_MkdirDate(t *testing.T) {
 	fmt.Println("Testing MkdirDate")
-	ret := MkdirDate(".")
+	des, ret := MkdirDate(".")
 	if ret != nil {
 		t.Errorf("Error occured: %v\n", ret)
+	} else {
+		fmt.Println("Destination DIR :", des)
 	}
 }
 

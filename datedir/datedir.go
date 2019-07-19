@@ -11,8 +11,8 @@ func getDay() string {
 	return currentTime.Format("2006/01/02")
 }
 
-func MkdirDate(src string) error {
+func MkdirDate(src string) (string, error) {
 
 	des := filepath.Join(src, getDay())
-	return os.MkdirAll(des, 0755)
+	return des, os.MkdirAll(des, 0755)
 }
