@@ -22,6 +22,11 @@ func Test_MkdirDate(t *testing.T) {
 	}
 }
 
+func Test_GetDate(t *testing.T) {
+	fmt.Println("Testing GetDate")
+	fmt.Println(GetDate())
+}
+
 func Test_RemoveDir(t *testing.T) {
 	var ret error
 	fmt.Println("Clear testing DIR")

@@ -11,6 +11,11 @@ func getDay() string {
 	return currentTime.Format("2006/01/02")
 }
 
+func GetDate() string {
+	currentTime := time.Now()
+	return currentTime.Format("2006/01/02")
+}
+
 func MkdirDate(src string) (string, error) {
 
 	des := filepath.Join(src, getDay())
