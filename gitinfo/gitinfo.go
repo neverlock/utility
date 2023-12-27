@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-func Info(baseDir string, branch string) (string, error) {
+func ID(baseDir string, branch string) (string, error) {
 	gitID := baseDir + ".git/refs/heads/" + branch
 	if _, err := os.Stat(gitID); err != nil {
 		return "This path don't have git commit id in " + gitID, err
